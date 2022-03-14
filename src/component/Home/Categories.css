@@ -1,0 +1,129 @@
+/* Slideshow Css Starts */
+
+
+.carousel-item > img{
+    height:300px !important;
+    width:100% !important;
+}
+
+
+/* Slideshow Css Ends */
+
+/* Main Content Css Starts */
+.categories{
+    margin-top: 2%;
+    
+}
+
+.categories > p{
+    margin-left: 4%;
+    color: #39b76b;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.categoriesContainer > a{
+    float: left;
+    margin-left: 1%;
+    margin-top: 2%;
+
+}
+.img{
+    margin-left: 1% !important;
+    display: inline-block;
+}
+.safetymeasures{
+    height: 150px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 4%;
+}
+.safety1 > img{
+    float: left;
+    height: 129px;
+    width: 25%;
+    margin-left: 2%;
+}
+.safety > img{
+    float: left;
+    height: 120px;
+    width: 12%;
+    margin-left: 2%;
+}
+.featuredbrand{
+    height: 180px;
+    width: 100%;
+    margin-top: 3%;
+}
+.featuredbrand > h2{
+    color: #39b76b;
+    margin-left: 2%;
+}
+.feature{
+    width: 12%;
+    float: left;
+    margin-left: 2%
+}
+.feature:hover{
+    transform: scale(1.1);
+}
+.feature > img{
+    width: 100%;
+    height: 100%;
+}
+.deals{
+    height:460px;
+    width: 100%;
+    display: inline-block; 
+    background-color: #f8e3e3;
+    margin-top: 3%;
+}
+.dealarea > h4 {
+    float: left;
+    margin-left:3%;
+    margin-top: 3%;
+}
+.dealarea{
+    height: 100px;
+    width: 100%;
+    background-color: #f8e3e3;
+}
+.dealarea > img{
+    height: 100%;
+    width: 140px;
+    margin-left: 3%;
+    float: left;
+}  
+
+.row{
+    margin-top: 1%;
+}
+.card1{
+    height: 330px;
+}
+.card1 > img{
+    height: 180px;
+    border: 2px solid grey;
+    
+}
+.carousel-item > img{
+    height:300px !important;
+    width:100% !important;
+}
+.card-body{
+    background: rgb(250, 242, 242);
+}
+.offerimg{
+    /* background-image: url(images/deal/offerimg.svg); */
+    width: 40%;
+    font-weight: bold;
+    color: #fff;
+}
+.cardborder{
+    border: 1px dotted grey;
+}
+#demo{
+    color: #da4e50;
+    font-size: 30px;
+}
+/* Main Content Css Ends */
