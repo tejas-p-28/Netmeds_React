@@ -1,30 +1,71 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './Header.css';
-const url = "";
+
+const purl = "https://netmedsapi.herokuapp.com/product";
+const turl = "https://netmedsapi.herokuapp.com/category?type_id="
 
 class Header extends Component {
+
+    constructor(props){
+        super(props);
+        console.log("inside constructor")
+
+        this.state={
+            product:'',
+            categoryData:''
+        }
+    }
+
+    renderProduct = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item.products_id} key={item.products_id}>{item.products_name}</option>
+                )
+            })
+        }
+    }
+
+    renderCategory = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item.products_id} key={item._id}>{item.name}</option>
+                )
+            })
+        }
+    }
+
+    handleProduct = (event) => {
+        let productId = event.target.value;
+        fetch(`${turl}${productId}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({categoryData:data})
+        })
+    }
+
     render() {
+        console.log("inside render",this.state.product)
         return (
             <>
                 <div className="form-horizontal">
                     <div className="container-fluid">
                         <div className="header">
                             <a className="navbar-brand" href="index.html">Pharmaco</a>
-                            <select id="product" style={{textAlign: 'center'}} onChange="productList()">
+                            <select id="product" style={{textAlign: 'center'}} onChange={this.handleProduct}>
                                 <option>Products Available</option>
+                                {this.renderProduct(this.state.product)}
                             </select>
                             <form className="example" action="action_page.php">
-                                <input type="text" placeholder="Search medicines/Healthcare products" name="search"/>
+                                <input type="text" placeholder={this.renderCategory(this.state.categoryData)} name="search"/>
                                     <button type="submit"><i className="fa fa-search"></i></button>
                             </form>
                             <div className="weather">
-                                <p onload="geolocation()">
-                                    <p id="icon"></p>
-                                    <p id="address"></p>
-                                </p>
+                                <p id="icon"></p>
                             </div>
-                            <button className="btn btn-danger1" id="myDark" onclick="changeMode()">Mode</button>
+                            <button className="btn btn-danger1" id="myDark" >Mode</button>
                         </div>
                     </div>
                     <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -52,6 +93,14 @@ class Header extends Component {
                 </div>
             </>
         )
+    }
+    componentDidMount(){
+        console.log("inside component")
+        fetch(purl,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({product:data})
+        })
     }
 }
 

@@ -33,7 +33,7 @@ class Deals extends Component{
                     </div>
                     <div className="row">
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card" onmouseover="mice()" onmouseout="mice1()">
+                            <div className="card" id="card">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">22% OFF!</div>
@@ -47,7 +47,7 @@ class Deals extends Component{
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card1" onmouseover="mice2()" onmouseout="mice3()">
+                            <div className="card" id="card1">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">10% OFF!</div>
@@ -61,7 +61,7 @@ class Deals extends Component{
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card2" onmouseover="mice4()" onmouseout="mice5()">
+                            <div className="card" id="card2">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">18% OFF!</div>
@@ -75,7 +75,7 @@ class Deals extends Component{
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card3" onmouseover="mice6()" onmouseout="mice7()">
+                            <div className="card" id="card3">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">15% OFF!</div>
@@ -89,7 +89,7 @@ class Deals extends Component{
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card4" onmouseover="mice8()" onmouseout="mice9()">
+                            <div className="card" id="card4">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">18% OFF!</div>
@@ -103,7 +103,7 @@ class Deals extends Component{
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">
-                            <div className="card" id="card5" onmouseover="mice10()" onmouseout="mice11()">
+                            <div className="card" id="card5">
                                 <div className="card1">
                                     <div className="cardborder">
                                         <div className="offerimg">20% OFF!</div>
