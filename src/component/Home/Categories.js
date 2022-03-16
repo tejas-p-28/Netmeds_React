@@ -48,19 +48,19 @@ class Categories extends Component {
                     <p>Top categories</p>
                     <div className="imgcategory">
                         <div className="categoriesContainer">
-                            <Link to="/Listing/:typeId" className="img"><img src="images/categories images/Accucheck-Devices.jpg"
+                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Accucheck-Devices.jpg"
                                 alt="Devices" className="img"/></Link>
                         </div>
                         <div className="categoriesContainer">
-                            <Link to="/Listing/:typeId" className="img"><img src="images/categories images/Nutrition-drinks.jpg" alt="Nutrition Drinks"
+                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Nutrition-drinks.jpg" alt="Nutrition Drinks"
                                 className="img"/></Link>
                         </div>
                         <div className="categoriesContainer">
-                            <Link to="/Listing/:typeId" className="img"><img src="images/categories images/Baby-Mom-care.jpg" alt="Baby and Mom Care"
+                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Baby-Mom-care.jpg" alt="Baby and Mom Care"
                                 className="img"/></Link>
                         </div>
                         <div className="categoriesContainer">
-                            <Link to="/Listing/:typeId" className="img"><img src="images/categories images/Ayurvedic-care.jpg" alt="Ayurvedic Care"
+                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Ayurvedic-care.jpg" alt="Ayurvedic Care"
                                 className="img"/></Link>
                         </div>
                     </div>
