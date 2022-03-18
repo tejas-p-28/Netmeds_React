@@ -53,14 +53,10 @@ class Header extends Component {
                 <div className="form-horizontal">
                     <div className="container-fluid">
                         <div className="header">
-                            <a className="navbar-brand" href="index.html">Pharmaco</a>
-                            <select id="product" style={{textAlign: 'center'}} onChange={this.handleProduct}>
-                                <option>Products Available</option>
-                                {this.renderProduct(this.state.product)}
-                            </select>
-                            <form className="example" action="action_page.php">
-                                <input type="text" placeholder={this.renderCategory(this.state.categoryData)} name="search"/>
-                                    <button type="submit"><i className="fa fa-search"></i></button>
+                            <Link to={"/home"} className="navbar-brand" href="index.html">Pharmaco</Link>
+                            <form className="example" action="">
+                                <input type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
+                                    <button type="submit"></button>
                             </form>
                             <div className="weather">
                                 <p id="icon"></p>
