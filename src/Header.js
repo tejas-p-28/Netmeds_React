@@ -1,62 +1,36 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Header.css';
 
-const purl = "https://netmedsapi.herokuapp.com/product";
-const turl = "https://netmedsapi.herokuapp.com/category?type_id="
+const purl = "https://netmedsapi.herokuapp.com/category";
 
 class Header extends Component {
 
-    constructor(props){
-        super(props);
-        console.log("inside constructor")
-
+    constructor(){
+        super()
+ 
         this.state={
-            product:'',
-            categoryData:''
+            title:'Pharmaco',
+            keywords:'Search medicines/Healthcare products @18% OFF'
         }
-    }
+     }
 
-    renderProduct = (data) => {
-        if(data){
-            return data.map((item) => {
-                return(
-                    <option value={item.products_id} key={item.products_id}>{item.products_name}</option>
-                )
-            })
-        }
-    }
 
-    renderCategory = (data) => {
-        if(data){
-            return data.map((item) => {
-                return(
-                    <option value={item.products_id} key={item._id}>{item.name}</option>
-                )
-            })
-        }
-    }
-
-    handleProduct = (event) => {
-        let productId = event.target.value;
-        fetch(`${turl}${productId}`,{method:'GET'})
-        .then((res) => res.json())
-        .then((data) => {
-            this.setState({categoryData:data})
-        })
+    handleChange = (event) => {
+        this.setState({keywords:event.target.value?event.target.value:'Search medicines/Healthcare products @18% OFF'})
+        this.props.userInput(event.target.value);
     }
 
     render() {
-        console.log("inside render",this.state.product)
+        console.log("inside render")
         return (
             <>
                 <div className="form-horizontal">
                     <div className="container-fluid">
                         <div className="header">
-                            <Link to={"/home"} className="navbar-brand" href="index.html">Pharmaco</Link>
+                            <Link to={"/home"} className="navbar-brand" >Pharmaco</Link>
                             <form className="example" action="">
-                                <input type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
-                                    <button type="submit"></button>
+                                <input onChange={this.handleChange} type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
                             </form>
                             <div className="weather">
                                 <p id="icon"></p>
@@ -71,7 +45,7 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item pe-5">
-                                    <a className="nav-link" href="medicine.html">Order Medicines</a>
+                                    <Link to={'/home1'} className="nav-link" href="medicine.html">Order Medicines</Link>
                                 </li>
                                 <li className="nav-item pe-5">
                                     <a className="nav-link" href="product.html">Healthcare Products</a>

@@ -1,23 +1,19 @@
 import React from 'react';
 
+
 const ListingDisplay = (props) => {
 
     const renderData = ({listData}) => {
         if(listData){
             if(listData.length > 0){
-                return listData.map((item) => {
+                return listData.map((item,index) => {
                     return(
-                        <div className="filterContent">
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <div className="card">
-                                        <img src={item.image}/>
-                                            <div className="card-body">
-
-                                            </div>
-                                    </div>
+                        <div className="card">
+                            <img src={item.image} alt={item.name}/>
+                                <div className="card-body">
+                                    <p>{item.name}</p>
+                                    <p>{item.discount_cost}</p>
                                 </div>
-                            </div>
                         </div>
                     )
                 })
@@ -37,6 +33,13 @@ const ListingDisplay = (props) => {
             )
         }
     }
+    return(
+        <>
+            <div className="">
+                {renderData(props)}
+            </div>
+        </>
+    )
 }
 
 export default ListingDisplay

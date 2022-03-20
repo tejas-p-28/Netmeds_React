@@ -1,166 +1,4 @@
-body{
-    margin: auto;
-    overflow-x: hidden !important;
-    background-color: #c6d1da;
-}
-a{
-    text-decoration: none;
-}
-/*Header Css Starts*/
-.form-horizontal{
-    background-color: #0eb184;
-    width: 100%;
-}
 
-.navbar-brand {
-    color: #fff;
-    float: left;
-    font-size: 32px;
-    margin-top: 1%;
-    font-weight: bolder !important;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-.d-flex{
-    float: left;
-}
-.weather{
-    float: right;
-    width: 14%;
-    margin-left: 2%;
-}
-#icon{
-    float: left;
-    margin-top: 0%;
-    height: 50px;
-    width: 80px;
-}
-#icon > img {
-    height: 81px;
-    width: 94px;
-    margin-top: -20%;
-}
-#address{
-    float: left;
-    font-size: 25px;
-    color: white;
-    margin-top: 2%;
-    font-weight: bold;
-    margin-left: 2%;
-}
-.example{
-    float: left;
-    margin-top: 1%;
-    width: 34%;
-}
-.header > select{
-    float: left;
-    font-size: 17px;
-    border: 1px solid grey;
-    width: 15%;
-    background: #f1f1f1;
-    height: 48px;
-    margin-top: 1%;
-}
-.fa-caret-down{
-    height: 50px;
-} 
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  
-
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background-color: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; 
-    cursor: pointer;
-    width: 10%;
-    height: 48px;
-  }
-  
-form.example button:hover {
-    background: #0b7dda;
-  }
-  
-
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-.fa-cart-plus{
-    font-size: 35px;
-    display: inline-block;
-    color: #fff;
-} 
-form.example button:hover {
-    background: rgb(167, 164, 164);
-}
-
-.navbar{
-    background-color: #0eb184 !important;
-    display: inline-block;
-    margin-left: 12%;
-}
-
-.nav-link{
-    font-size: 20px;
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-}
-.nav-link:after{
-    content:'';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.nav-link:hover:after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-.btn-danger1{
-    float: right !important;
-    height:45px !important;
-    width: 65px !important;
-    margin-top: 1%;
-    margin-left: 0%;
-    background-color: #da3c4c;
-    color: white;
-}
-/*header css ends*/
-
-/* breadcrumb css starts*/
-.breadcrumbContainer{
-    margin-left: 6%;
-    float: left;
-    margin-top: 3% !important;
-}
-.breadcrumb-item > a{
-    font-weight: bold;
-    color: grey !important;
-}
-
-/* breadcrumb css ends*/
 .container1{
     display: inline-block;
     width: 100%;
@@ -174,73 +12,47 @@ form.example button:hover {
     margin-top: 1%;
     color:  #444141;
     margin-left: 1%;
+    float: left;
 }
 .filter{
     width: 20%;
     height: 500px;
     float: left;
     margin-left: 4%;
+    border:2px solid grey;
 }
-p > input{
-    float: right;
-    margin-right: 15%;
-    height: 18px;
-    width: 18px;
-    margin-top: 2%;
-}
+
 .filterContent{
     width: 65%;
-    height: 1000px;
     float: left;
     margin-left: 1%;
     margin-right: 5%;
+    border:2px solid grey;
 }
-.filterContent > h3{
-    float: left;
-}
-.filterContent > select{
-    margin-right: 25%;
-    float: right;
-    margin-top: 2%;
-    font-size: 18px;
-}
+
 .filterContent > p{
     margin-right: 25%;
     float: right;
     margin-top: 2%;
     font-size: 18px;
 }
-.filterContent > select{
-    height: 40px;
-    width: 170px;
-    margin-right: -30%;
-    margin-top: 1%;
-}
-.row{
-    margin-top: 8%;
-}
+
+
 .card{
     box-shadow:10px 20px 10px grey ;
     margin-bottom: 10%;
+    float:left;
+    width:100%;
 }
 .card > img{
     height: 200px;
+    width:100%;
 }
 .card-body{
     color: #000;
 }
-.card-body > h4{
-    text-overflow: clip;
-    font-size: 18px;
-}
-details{
-    display: inline;
-}
-.offerimg{
-    background-image: url('C:\Users\TEJAS PATIL\OneDrive\Desktop\Full Stack Development\React App\netmeds\public\images\deal\offerimg.svg');
-    width: 40%;
-    font-weight: bold;
-    color: #fff !important;
-}
+
+
+
 
 

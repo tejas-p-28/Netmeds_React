@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 import './Categories.css';
-import {Link} from 'react-router-dom';
-const url = "https://netmedsapi.herokuapp.com/category?type_id=8"
+import CategoriesDisplay from './CategoriesDisplay';
+
+
+const url = "https://netmedsapi.herokuapp.com/product"
 
 class Categories extends Component {
     constructor(){
         super()
 
         this.state={
-            sortType:''
+            category:''
         }
     }
-    
-    render() {
+    render(){
         return (
             <>
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -46,35 +47,22 @@ class Categories extends Component {
                 </div>
                 <div className="categories">
                     <p>Top categories</p>
-                    <div className="imgcategory">
-                        <div className="categoriesContainer">
-                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Accucheck-Devices.jpg"
-                                alt="Devices" className="img"/></Link>
-                        </div>
-                        <div className="categoriesContainer">
-                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Nutrition-drinks.jpg" alt="Nutrition Drinks"
-                                className="img"/></Link>
-                        </div>
-                        <div className="categoriesContainer">
-                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Baby-Mom-care.jpg" alt="Baby and Mom Care"
-                                className="img"/></Link>
-                        </div>
-                        <div className="categoriesContainer">
-                            <Link to="/Listing/:sortId" className="img"><img src="images/categories images/Ayurvedic-care.jpg" alt="Ayurvedic Care"
-                                className="img"/></Link>
-                        </div>
-                    </div>
+                    <CategoriesDisplay productData = {this.state.category}/>
                 </div>
+                
             </>
         )
     }
+
+    
     componentDidMount(){
         fetch(url,{method:'GET'})
         .then((res) => res.json())
         .then((data) => {
-            this.setState({sortType:data})
+            this.setState({category:data})
         })
-    }
+    }  
+    
 }
 
 export default Categories
