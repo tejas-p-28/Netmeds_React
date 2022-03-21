@@ -28,7 +28,7 @@ class Header extends Component {
                 <div className="form-horizontal">
                     <div className="container-fluid">
                         <div className="header">
-                            <Link to={"/home"} className="navbar-brand" >Pharmaco</Link>
+                            <Link to={`/`} className="navbar-brand" style={{color:'white'}}>Pharmaco</Link>
                             <form className="example" action="">
                                 <input onChange={this.handleChange} type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
                             </form>
@@ -45,17 +45,17 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item pe-5">
-                                    <Link to={'/home1'} className="nav-link" href="medicine.html">Order Medicines</Link>
+                                    <Link to={`/`} className="nav-link">Order Medicines</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <a className="nav-link" href="product.html">Healthcare Products</a>
+                                    <Link to={`/`} className="nav-link" href="product.html">Healthcare Products</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <a className="nav-link" href="#">Login / Signup</a>
+                                    <Link to={`/`} className="nav-link" href="#">Login / Signup</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <a className="nav-link" href="#"><i className="fa fa-cart-plus"
-                                        style={{justifyContent: 'flex-end'}}></i></a>
+                                    <Link to={`/`} className="nav-link" href="#"><i className="fa fa-cart-plus"
+                                        style={{justifyContent: 'flex-end'}}></i></Link>
                                 </li>
                             </ul>
                         </div>

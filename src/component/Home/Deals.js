@@ -29,7 +29,7 @@ class Deals extends Component{
                     <div className="dealarea">
                         <img src="/images/deal/deal.svg" alt=""/>
                         <h4>Deal of the Day</h4>
-                        <h4 id="demo"></h4>
+                        {/* <h4 id="demo"></h4> */}
                     </div>
                     <div className="row">
                         <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-4">

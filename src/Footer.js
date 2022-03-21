@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import './Footer.css';
 
 const Footer = () => {
@@ -11,32 +12,32 @@ const Footer = () => {
             </div>
             <div className="socials">
                 <h5><b>Follow us on</b></h5>
-                <a href="https://www.facebook.com/tejas.b.patil.12" target="_blank"><img src="https://i.ibb.co/DfyFPkr/facebook.jpg"
-                    className="socials1" alt="Instagram"/></a>
-                <a href="https://www.instagram.com/innocent_boy_tp/" target="_blank"><img src="https://i.ibb.co/zPWFswT/insta.jpg"
-                    className="socials1" alt="Facebook"/></a>
-                <a href="https://github.com/tp-the-developer" target="_blank"><img src="https://i.ibb.co/Mg5nWYL/githb.jpg"
-                    className="socials1" alt="Github"/></a>
-                <a href="https://www.linkedin.com/in/tejas-patil-623430218/" target="_blank"><img
-                    src="https://i.ibb.co/yYtWMKB/linkedin.jpg" className="socials1" alt="LinkedIn"/></a>
-                <a href="https://mobile.twitter.com/TejasPa98739034" target="_blank"><img src="https://i.ibb.co/0t1CFbR/twitter1.jpg"
-                    className="socials1" alt="Twitter"/></a>
+                <Link href="https://www.facebook.com/tejas.b.patil.12" target="_blank"><img src="https://i.ibb.co/DfyFPkr/facebook.jpg"
+                    className="socials1" alt="Instagram"/></Link>
+                <Link href="https://www.instagram.com/innocent_boy_tp/" target="_blank"><img src="https://i.ibb.co/zPWFswT/insta.jpg"
+                    className="socials1" alt="Facebook"/></Link>
+                <Link href="https://github.com/tp-the-developer" target="_blank"><img src="https://i.ibb.co/Mg5nWYL/githb.jpg"
+                    className="socials1" alt="Github"/></Link>
+                <Link href="https://www.linkedin.com/in/tejas-patil-623430218/" target="_blank"><img
+                    src="https://i.ibb.co/yYtWMKB/linkedin.jpg" className="socials1" alt="LinkedIn"/></Link>
+                <Link href="https://mobile.twitter.com/TejasPa98739034" target="_blank"><img src="https://i.ibb.co/0t1CFbR/twitter1.jpg"
+                    className="socials1" alt="Twitter"/></Link>
             </div>
             <div className="featuredFooter">
                 <h5><b>Featured Category</b></h5>
-                <a href="">Covid Essentials</a>
-                <a href="">Healthcare Products</a>
-                <a href="">Nutrition Drinks</a>
-                <a href="">Personal Care</a>
-                <a href="">Ayurvedic Care</a>
-                <a href="">Skin Care</a>
-                <a href="">Sexual Wellness</a>
-                <a href="">Home Care</a>
+                <Link to={'/'}>Covid Essentials</Link>
+                <Link to={'/'}>Healthcare Products</Link>
+                <Link to={'/'}>Nutrition Drinks</Link>
+                <Link to={'/'}>Personal Care</Link>
+                <Link to={'/'}>Ayurvedic Care</Link>
+                <Link to={'/'}>Skin Care</Link>
+                <Link to={'/'}>Sexual Wellness</Link>
+                <Link to={'/'}>Home Care</Link>
             </div>
             <div className="services">
                 <h5><b>Our Services</b></h5>
-                <a href="medicine.html">Order Medicines</a><br/>
-                    <a href="">Healthcare Products</a>
+                <Link to={'/'} >Order Medicines</Link><br/>
+                    <Link to={'/'}>Healthcare Products</Link>
             </div>
             {/* <div className="partner">
                 <h5><b>Our Payments Partner</b></h5>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 
 const ListingDisplay = (props) => {
 
@@ -9,6 +9,7 @@ const ListingDisplay = (props) => {
                 return listData.map((item,index) => {
                     return(
                         <div className="card">
+                            <Link to={`/details?prodId=${item._id}`} style={{color:'blue'}}><h4><b>{item.name}</b></h4></Link>
                             <img src={item.image} alt={item.name}/>
                                 <div className="card-body">
                                     <p>{item.name}</p>
