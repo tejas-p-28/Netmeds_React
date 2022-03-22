@@ -13,8 +13,45 @@ class Header extends Component {
             title:'Pharmaco',
             keywords:'Search medicines/Healthcare products @18% OFF'
         }
-     }
+    }
 
+    
+    showPosition(data) {
+        console.log(data)
+        let lat = data.coords.latitude;
+        let long = data.coords.longitude
+        var url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                data.list.map((item) => {
+                    let y = document.getElementById("address");
+                    let z = document.getElementById('icon')
+                    console.log(item.temp.day)
+                    y.innerText = `${item.temp.day}°C`
+                    z.innerHTML = `<img className='card-img-top' src='https://openweathermap.org/img/w/${item.weather[0].icon}.png' alt='weather'/>`
+                })
+
+            })
+    }
+
+
+    geolocation(showPosition) {
+        let x = document.getElementById("out")
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition)
+        } else {
+            x.innerText = "Geo Not Supported"
+        }
+    }
+
+    
+    changeMode() {
+        var mybody = document.body;
+        mybody.classList.toggle("mydark")
+    
+    }
 
     handleChange = (event) => {
         this.setState({keywords:event.target.value?event.target.value:'Search medicines/Healthcare products @18% OFF'})
@@ -32,10 +69,13 @@ class Header extends Component {
                             <form className="example" action="">
                                 <input onChange={this.handleChange} type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
                             </form>
-                            <div className="weather">
-                                <p id="icon"></p>
+                            <div class="weather">
+                                <div onLoad="geolocation(showPosition)">
+                                    <p id="icon"></p>
+                                    <p id="address"></p>
+                                </div>
                             </div>
-                            <button className="btn btn-danger1" id="myDark" >Mode</button>
+                            <button className="btn btn-danger1" id="myDark" onClick="changeMode()">Mode</button>
                         </div>
                     </div>
                     <nav className="navbar navbar-expand-sm bg-dark navbar-dark">

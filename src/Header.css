@@ -1,3 +1,6 @@
+.mydark{
+    background-color: rgb(43, 42, 42) !important;
+}
 body{
     margin: auto;
     background-color: #cae9e0 !important;
@@ -73,7 +76,7 @@ select{
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 3px solid #bdadad;
     float: left;
     width: 80%;
     background: #f1f1f1;
