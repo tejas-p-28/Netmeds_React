@@ -20,11 +20,7 @@ class Listing extends Component {
                         <h3>Filter</h3>
                     </div>
                     <div className="filterContent">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <ListingDisplay listData={this.state.productList}/>
-                            </div>
-                        </div>
+                        <ListingDisplay listData={this.state.productList}/>
                     </div>
                 </div>
             </>

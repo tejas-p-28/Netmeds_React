@@ -46,7 +46,7 @@ class Categories extends Component {
                     </div>
                 </div>
                 <div className="categories">
-                    <p>Top categories</p>
+                    <p style={{marginLeft: '4%', color:'#39b76b', fontSize:'30px', fontWeight:'bolder'}}>Top categories</p>
                     <CategoriesDisplay productData = {this.state.category}/>
                 </div>
                 

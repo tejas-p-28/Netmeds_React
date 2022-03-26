@@ -47,11 +47,11 @@ class Header extends Component {
     }
 
     
-    changeMode() {
-        var mybody = document.body;
-        mybody.classList.toggle("mydark")
+    // changeMode() {
+    //     var mybody = document.body;
+    //     mybody.classList.toggle("mydark")
     
-    }
+    // }
 
     handleChange = (event) => {
         this.setState({keywords:event.target.value?event.target.value:'Search medicines/Healthcare products @18% OFF'})
@@ -69,13 +69,13 @@ class Header extends Component {
                             <form className="example" action="">
                                 <input onChange={this.handleChange} type="text" placeholder="Search medicines/Healthcare products @18% OFF" name="search"/>
                             </form>
-                            <div class="weather">
+                            <div className="weather">
                                 <div onLoad="geolocation(showPosition)">
                                     <p id="icon"></p>
                                     <p id="address"></p>
                                 </div>
                             </div>
-                            <button className="btn btn-danger1" id="myDark" onClick="changeMode()">Mode</button>
+                            {/* <button className="btn btn-danger1" id="myDark" onClick="changeMode()">Mode</button> */}
                         </div>
                     </div>
                     <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -88,13 +88,13 @@ class Header extends Component {
                                     <Link to={`/`} className="nav-link">Order Medicines</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <Link to={`/`} className="nav-link" href="product.html">Healthcare Products</Link>
+                                    <Link to={`/`} className="nav-link">Healthcare Products</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <Link to={`/`} className="nav-link" href="#">Login / Signup</Link>
+                                    <Link to={`/`} className="nav-link">Login / Signup</Link>
                                 </li>
                                 <li className="nav-item pe-5">
-                                    <Link to={`/`} className="nav-link" href="#"><i className="fa fa-cart-plus"
+                                    <Link to={`/`} className="nav-link"><i className="fa fa-cart-plus"
                                         style={{justifyContent: 'flex-end'}}></i></Link>
                                 </li>
                             </ul>

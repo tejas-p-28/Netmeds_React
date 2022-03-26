@@ -11,9 +11,9 @@ const CategoriesDisplay = (props) => {
                     <>
                         <Link to={`/listing/${item.type_id}`} key={item._id}>
                             <div className="col-md-4" style={{float:'left'}}>
-                                <div className="card" style={{width:'80%'}}>
+                                <div className="card" style={{width:'80%', float:'left', marginLeft:'10%'}}>
                                         <img src={item.image} alt={item.products_name} style={{width:'100%'}}/>
-                                    <p style={{color:'black', fontSize:'20px'}}>{item.products_name}</p>
+                                    <p className="productName" style={{color:'#a52b2b', fontSize:'20px', textAlign:'center', fontWeight:'bold'}}>{item.products_name}</p>
                                 </div>
                             </div>
                            
