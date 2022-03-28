@@ -4,15 +4,19 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Details.css';
+import MenuDisplay from './menuDisplay';
 
-const url = "https://netmedsapi.herokuapp.com/details"
+const url = "https://netmedsapi.herokuapp.com/details";
+const menuUrl = "https://netmedsapi.herokuapp.com/menu"
 
 class Details extends Component {
     constructor(props) {
         super(props)
 
         this.state={
-            details:''
+            details:'',
+            menuList:''
+            
         }
     }
 
@@ -31,8 +35,10 @@ class Details extends Component {
                     </div>
                     <div className="tileContent">
                         <div className="content">
-                            <h1>{details.name}</h1>
-                            <h3>We Provide Best Service</h3>
+                            <h3><u>{details.name}</u></h3>
+                            <p>Old Price: <b>{details.original_cost}</b></p>
+                            <p>New Price: <b>{details.discount_cost}</b></p>
+                            <h4>We Provide Best Service</h4>
                             <div>
                                 <div className="icons">
                                     <img src="https://i.ibb.co/2FbpqtH/sentizied.jpg" alt="sentizied"/>
@@ -45,11 +51,11 @@ class Details extends Component {
                             <Tabs>
                                 <TabList>
                                     <Tab>Details</Tab>
-                                    <Tab>Contact</Tab>
+                                    <Tab>Ratings</Tab>
                                 </TabList>
 
                                 <TabPanel>
-                                    <h2>{details.name}</h2>
+                                    <h5>{details.name}</h5>
                                     <p>
                                         <b>{details.name}</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
                                     </p>
@@ -66,6 +72,7 @@ class Details extends Component {
                             </div>
                         </div>
                     </div>
+                    <MenuDisplay menuData={this.state.menuList}/>
                 </div>
                 
             </>
@@ -75,7 +82,8 @@ class Details extends Component {
     async componentDidMount(){
         let prodid = this.props.location.search.split('=')[1];
         let response = await axios.get(`${url}/${prodid}`)
-        this.setState({details:response.data[0]})
+        let prodData = await axios.get(`${menuUrl}/${prodid}`)
+        this.setState({details:response.data[0], menuList:prodData.menuData})
     }
     
 }

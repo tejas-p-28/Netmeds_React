@@ -1,21 +1,23 @@
 .main{
     display: inline-block;
-    width:100%
+    width:100%;
 }
 
 .tileImage{
-    height: 550px;
-    width:48%;
+    height: 500px;
+    width:45%;
     float: left;
+    margin-top:5%;
 }
 
 
 
 .tileContent{
-    height: 550px;
+    height: 640px;
     width:50%;
     margin-left: 2%;
     float: left;
+    margin-top:5%;
 }
 
 .imageClass > img{

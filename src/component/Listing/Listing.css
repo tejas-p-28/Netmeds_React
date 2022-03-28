@@ -1,4 +1,6 @@
-
+body{
+    background-color:white !important;
+}
 .container1{
     display: inline-block;
     width: 100%;
@@ -20,6 +22,7 @@
     float: left;
     margin-left: 4%;
     border:2px solid grey;
+    margin-top:5%;
 }
 
 .filterContent{
@@ -27,7 +30,7 @@
     float: left;
     margin-left: 1%;
     margin-right: 5%;
-    border:2px solid grey;
+    margin-top:5%;
 }
 
 .filterContent > p{
@@ -43,6 +46,7 @@
     margin-bottom: 10%;
     float:left;
     width:100%;
+    background-color: white;
 }
 .card > img{
     height: 200px;
@@ -50,6 +54,12 @@
 }
 .card-body{
     color: #000;
+    background-color: white;
+}
+span {
+    background-color: #39d739;
+    border-radius: 5px;
+    color:white;
 }
 
 
