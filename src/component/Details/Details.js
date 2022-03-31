@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
-import {Link} from 'react-router-dom'
+import MenuDisplay from './menuDisplay';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Details.css';
-import MenuDisplay from './menuDisplay';
 
 const url = "https://netmedsapi.herokuapp.com/details";
 const menuUrl = "https://netmedsapi.herokuapp.com/menu"
@@ -20,24 +20,29 @@ class Details extends Component {
         }
     }
 
+    addToCart = (data) => {
+        console.log(">>>>",data)
+        this.setState({userItem:data})
+    }
+
 
     render(){
     
         //let details = this.state.details
-        let details = this.state.details
+        let {details} = this.state
         return(
             <>
                 <div className="main">
                     <div className="tileImage">
                         <div className="imageClass">
-                            <img src={this.state.details.image} alt={details.name}/>
+                            <img src={details.image} alt={details.name}/>
                         </div>
                     </div>
                     <div className="tileContent">
                         <div className="content">
                             <h3><u>{details.name}</u></h3>
-                            <p>Old Price: <b>{details.original_cost}</b></p>
-                            <p>New Price: <b>{details.discount_cost}</b></p>
+                            <p>Old Price: <strike><b>{details.original_cost} Rs</b></strike></p>
+                            <p>New Price: <b>{details.discount_cost} Rs</b></p>
                             <h4>We Provide Best Service</h4>
                             <div>
                                 <div className="icons">
@@ -61,7 +66,7 @@ class Details extends Component {
                                     </p>
                                 </TabPanel>
                                 <TabPanel>
-                                    <p>Rating: {details.average_rating}</p>
+                                    <p>Rating: <b>{details.average_rating} Stars</b></p>
                                 </TabPanel>
                                 
                             </Tabs>
@@ -72,7 +77,8 @@ class Details extends Component {
                             </div>
                         </div>
                     </div>
-                    <MenuDisplay menuData={this.state.menuList}/>
+                    <MenuDisplay menuData={this.state.menuList}
+                    finalOrder = {(data) => {this.addToCart(data)}}/>
                 </div>
                 
             </>
@@ -83,7 +89,7 @@ class Details extends Component {
         let prodid = this.props.location.search.split('=')[1];
         let response = await axios.get(`${url}/${prodid}`)
         let prodData = await axios.get(`${menuUrl}/${prodid}`)
-        this.setState({details:response.data[0], menuList:prodData.menuData})
+        this.setState({details:response.data[0], menuList:prodData.data})
     }
     
 }

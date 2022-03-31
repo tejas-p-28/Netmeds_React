@@ -8,7 +8,7 @@ const ListingDisplay = (props) => {
             if(listData.length > 0){
                 return listData.map((item,index) => {
                     return(
-                            <div className="col-md-12" style={{float:'left'}}>
+                            <div className="col-md-12" style={{float:'left'}} key={index}>
                                 <div className="card" style={{width:'80%', float:'left', marginLeft:'10%', height:'320px'}}>
                                     <img src={item.image} alt={item.name} style={{float:'left', height:'280px', width:'45%', borderRadius:'10px'}}/>
                                         <div className="card-body" style={{float:'left',width:'55%'}}>
