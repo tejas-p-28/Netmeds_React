@@ -25,11 +25,18 @@ class Details extends Component {
         this.setState({userItem:data})
     }
 
+    proceed = () => {
+        sessionStorage.setItem('menu',this.state.userItem)
+        this.props.history.push(`/placeOrder${this.state.details.name}`)
+    }
+
 
     render(){
     
-        //let details = this.state.details
-        let {details} = this.state
+        // //let details = details
+        let details = this.state.details
+        let abortController = new AbortController();
+        abortController.abort();
         return(
             <>
                 <div className="main">
@@ -38,7 +45,7 @@ class Details extends Component {
                             <img src={details.image} alt={details.name}/>
                         </div>
                     </div>
-                    <div className="tileContent">
+                    {/* <div className="tileContent">
                         <div className="content">
                             <h3><u>{details.name}</u></h3>
                             <p>Old Price: <strike><b>{details.original_cost} Rs</b></strike></p>
@@ -73,10 +80,10 @@ class Details extends Component {
                             <Link to={`/`} className="btn btn-danger">
                                 Back
                             </Link> &nbsp;
-                            <button className="btn btn-success">Proceed</button>
+                            <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <MenuDisplay menuData={this.state.menuList}
                     finalOrder = {(data) => {this.addToCart(data)}}/>
                 </div>
