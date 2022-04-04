@@ -1,10 +1,24 @@
 import React,{Component} from 'react';
+import axios from 'axios'
+import orderDisplay from './orderDisplay'
+
+const url = "https://netmedsapi.herokuapp.com/orders"
 
 class viewOrder extends Component{
+    constructor(props){
+        super(props);
+
+        rhis.state={
+            orders:''
+        }
+    }
     render(){
         return(
-            <h1>View Order</h1>
+            <orderDisplay orderData={this.state.orders}/>
         )
+    }
+    componentDidMount(){
+        axios.get(`${url}`).then((res) => {this.setState({orders:res.data})})
     }
 }
 

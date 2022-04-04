@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router-dom'
 
 class MenuDisplay extends Component {
     
@@ -7,11 +8,6 @@ class MenuDisplay extends Component {
     addItem = (id) => {
         this.orderId.push(id)
         this.props.finalOrder(this.orderId)
-    }
-    removeItem = (id) => {
-        if(this.orderId.indexOf(id) > -1){
-            this.orderId.splice(this.orderId.indexOf(id),1)
-        }
     }
 
     renderCart = (orders) => {
@@ -30,14 +26,11 @@ class MenuDisplay extends Component {
                 return(
                     <div key={item.care_id}>
                         <div className="row" style={{marginTop:'2%'}}>
-                            <div className="col-md-7">
-                                <b>{item.care_id}.</b>
-                                <img src={item.image} alt={item.name} style={{width:'80', height:'80'}}/>
-                                &nbsp; {item.name}- Rs. {item.discount_cost}
-                            </div>
-                            <div className="col-md-4">
+                            <div className="col-md-12">
                                 <button className="btn btn-success" onClick={() => {this.addItem(item.care_id)}}>+</button>&nbsp;
-                                <button className="btn btn-danger" onClick={() => {this.removeItem(item.care_id)}}>-</button>
+                                <Link to={`/`} className="btn btn-danger">
+                                    Back
+                                </Link> &nbsp;
                             </div>
                         </div>
                     </div>
@@ -50,11 +43,10 @@ class MenuDisplay extends Component {
         console.log(this.props)
         return(
             <>
-                <div className="col-md-12" style={{display:'inline-block',backgroundColor:'#dff0d8'}}>
-                    <h1>Item Added</h1>
+                <div className="" style={{display:'inline-block', marginTop:'0%'}}>
                     Item Number {this.renderCart(this.orderId)}Added
-                </div> 
-                <div className="col-md-12" style={{backgroundColor:'#d9edf7', marginTop:'0%'}}>
+                </div>
+                <div className="" style={{marginTop:'0%'}}>
                     {this.renderMenu(this.props)}
                 </div>
                 <hr/>

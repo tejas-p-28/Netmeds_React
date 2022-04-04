@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import MenuDisplay from './menuDisplay';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Details.css';
@@ -27,14 +26,14 @@ class Details extends Component {
 
     proceed = () => {
         sessionStorage.setItem('menu',this.state.userItem)
-        this.props.history.push(`/placeOrder${this.state.details.name}`)
+        this.props.history.push(`/placeOrder/${this.state.details.name}`)
     }
 
 
     render(){
     
         // //let details = details
-        let details = this.state.details
+        let {details} = this.state
         let abortController = new AbortController();
         abortController.abort();
         return(
@@ -42,10 +41,10 @@ class Details extends Component {
                 <div className="main">
                     <div className="tileImage">
                         <div className="imageClass">
-                            <img src={details.image} alt={details.name}/>
+                            <img src={details.image} alt=""/>
                         </div>
                     </div>
-                    {/* <div className="tileContent">
+                    <div className="tileContent">
                         <div className="content">
                             <h3><u>{details.name}</u></h3>
                             <p>Old Price: <strike><b>{details.original_cost} Rs</b></strike></p>
@@ -77,13 +76,11 @@ class Details extends Component {
                                 </TabPanel>
                                 
                             </Tabs>
-                            <Link to={`/`} className="btn btn-danger">
-                                Back
-                            </Link> &nbsp;
-                            <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
+                            
+                            <button className="btn btn-info" onClick={this.proceed}>Proceed</button>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                     <MenuDisplay menuData={this.state.menuList}
                     finalOrder = {(data) => {this.addToCart(data)}}/>
                 </div>
