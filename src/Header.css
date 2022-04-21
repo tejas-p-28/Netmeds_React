@@ -17,62 +17,25 @@ a{
 .form-horizontal{
     background-color: #0eb184;
     width: 100%;
+    height: 90px;
 }
 
 .navbar-brand {
     color: #fff;
     float: left;
     font-size: 32px;
-    margin-top: 1%;
     font-weight: bolder !important;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-.d-flex{
-    float: left;
-}
-.weather{
-    float: right;
-    width: 14%;
-    margin-left: 2%;
-}
-#icon{
-    float: left;
-    margin-top: 0%;
-    height: 50px;
-    width: 80px;
-}
-#icon > img {
-    height: 81px;
-    width: 94px;
-    margin-top: -20%;
-}
-#address{
-    float: left;
-    font-size: 25px;
-    color: white;
-    margin-top: 2%;
-    font-weight: bold;
-    margin-left: 2%;
-}
 .example{
     float: left;
     margin-top: 1%;
     width: 34%;
 }
-select{
-    float: left;
-    font-size: 17px;
-    border: 1px solid grey;
-    width: 15%;
-    background: #f1f1f1;
-    height: 48px;
-    margin-top: 1%;
-}
-.fa-caret-down{
-    height: 50px;
-} 
+
+
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -81,7 +44,7 @@ form.example input[type=text] {
     width: 80%;
     background: #f1f1f1;
     height: 48px;
-  }
+}
   
 
 form.example button {
@@ -96,62 +59,22 @@ form.example button {
     cursor: pointer;
     width: 10%;
     height: 48px;
-  }
+}
   
 form.example button:hover {
     background: #0b7dda;
-  }
+}
   
 
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 
-.fa-cart-plus{
-    font-size: 35px;
-    display: inline-block;
-    color: #fff;
-} 
 form.example button:hover {
     background: rgb(167, 164, 164);
 }
-
-.navbar{
-    background-color: #0eb184 !important;
-    display: inline-block;
-    margin-left: 12%;
+.btn {
+    float:right;
+    margin-right:1%;
+    margin-top:2%;
 }
-
-.nav-link{
-    font-size: 20px;
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-}
-.nav-link:after{
-    content:'';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.nav-link:hover:after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-.btn-danger1{
-    float: right !important;
-    height:45px !important;
-    width: 65px !important;
-    margin-top: 1%;
-    margin-left: 0%;
-    background-color: #da3c4c;
-    color: white;
+.btn-primary{
+    margin-right:1%;
 }

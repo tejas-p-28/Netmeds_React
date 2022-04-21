@@ -3,6 +3,8 @@ import axios from 'axios';
 import ListingDisplay from './ListingDisplay';
 import TypeFilter from '../filters/typeFilter';
 import './Listing.css';
+
+import Header from '../../Header';
 const prodUrl = "https://netmedsapi.herokuapp.com/category?type_id="
 
 class Listing extends Component {
@@ -21,6 +23,7 @@ class Listing extends Component {
     render(){
         return(
             <>
+                <Header/>
                 <div className="container1">
                     <div className="filter">
                         <center><h3>Filter</h3></center>

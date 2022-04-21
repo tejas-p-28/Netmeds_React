@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './Categories.css';
 import CategoriesDisplay from './CategoriesDisplay';
+import Header from '../../Header';
 
 
 const url = "https://netmedsapi.herokuapp.com/product"
@@ -16,7 +17,8 @@ class Categories extends Component {
     render(){
         return (
             <>
-                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <Header/>
+                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" >
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                             className="active"></button>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Details.css';
+import Header from '../../Header';
 
 const url = "https://netmedsapi.herokuapp.com/details";
 const menuUrl = "https://netmedsapi.herokuapp.com/menu"
@@ -38,6 +39,7 @@ class Details extends Component {
         abortController.abort();
         return(
             <>
+                <Header/>
                 <div className="main">
                     <div className="tileImage">
                         <div className="imageClass">
