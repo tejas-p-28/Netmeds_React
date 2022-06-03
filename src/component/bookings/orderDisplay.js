@@ -23,7 +23,7 @@ const orderDisplay = (props) => {
     }
 
     return(
-        <div className="container">
+        <div className="container" style={{height:'auto'}}>
             <center><h3>Your Orders</h3></center>
             <table  className="table">
                 <thead>

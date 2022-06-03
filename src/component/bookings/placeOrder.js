@@ -74,7 +74,7 @@ class placeOrder extends Component{
         return(
             <>
                 <Header/>
-                <div className="container" style={{border:'3px solid #3390ec', marginTop:'3%'}}>
+                <div className="container" style={{border:'3px solid #3390ec', marginTop:'3%', height:'auto'}}>
                         <div className="panel-heading">
                             <h4 style={{marginTop:'1%'}}>Your Order of {this.props.match.params.prodName}</h4>
                         </div>

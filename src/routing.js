@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Home from './component/Home/Home';
 import Listing from './component/Listing/Listing';
 import Details from './component/Details/Details';
-import viewBooking from './component/bookings/viewOrder';
+import viewOrders from './component/bookings/viewOrder';
 import placeOrder from './component/bookings/placeOrder';
 import login from './component/loginLogout/login';
 import register from './component/loginLogout/register';
@@ -16,7 +16,7 @@ const Router = () => {
                 <Route exact path="/" component={Home}/>
                 <Route path="/listing/:typeId" component={Listing}/>
                 <Route path="/details" component={Details}/>
-                <Route path="/viewBooking" component={viewBooking}/>
+                <Route path="/viewBooking" component={viewOrders}/>
                 <Route path="/placeOrder/:prodName" component={placeOrder}/>
                 <Route path="/login" component={login}/>
                 <Route path="/register" component={register}/>
