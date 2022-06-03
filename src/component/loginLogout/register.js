@@ -66,7 +66,7 @@ class Register extends Component {
                                     <div className="form-group">
                                         <label form="form-control" for="password">Password</label>
                                         <input className="form-control" id="password" type="password"
-                                        name="pwd" onChange={this.handleChange}/>
+                                        name="password" onChange={this.handleChange}/>
                                     </div>
                                 </div>
                             </div>
