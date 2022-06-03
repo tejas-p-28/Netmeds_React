@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {withRouter, Link} from 'react-router-dom';
 import './Header.css';
 
-const purl = "https://netmedsapi.herokuapp.com/category";
+
 const url = "https://netmedslogin.herokuapp.com/api/auth/userInfo"
 
 class Header extends Component {
