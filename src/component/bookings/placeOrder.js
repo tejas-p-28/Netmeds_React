@@ -68,9 +68,7 @@ class placeOrder extends Component{
                 </>
             )
         }
-        let abortController = new AbortController();
-        abortController.abort();
-        console.log(this.state)
+        
         return(
             <>
                 <Header/>
